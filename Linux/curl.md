@@ -1,8 +1,9 @@
 curl
 
-```
+```bash
 curl -x 127.1:18001 http://www.test.com/index.html -vo /dev/null
 
+# 需要指定端口https://域名:端口，443可省略
 curl --resolve www.test.com:7843:127.0.0.1 https://www.test.com:7843/index.html -vo /dev/null -k
 ```
 
