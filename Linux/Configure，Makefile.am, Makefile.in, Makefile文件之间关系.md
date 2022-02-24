@@ -1,6 +1,6 @@
 ## Configure，Makefile.am, Makefile.in, Makefile文件之间关系					
 
-
+![Makefile](.\image\Makefile.jpg)
 
 <TABLE style="WIDTH: 100%; TABLE-LAYOUT: auto">
 <TBODY>
@@ -32,7 +32,6 @@
 <P>生成 Makefile.in， depcomp， install-sh， 和 missing (根据 Makefile.am, 和 aclocal.m4)</P>
 <P><FONT color=#ff0000>[litao@vm0000131 hello]$ automake</FONT><BR>configure.in: required file `./install-sh' not found<BR>configure.in: required file `./missing' not found<BR>Makefile.am: required file `./depcomp' not found<BR><FONT color=#ff0000>[litao@vm0000131 hello]$ automake --add-missing</FONT><BR>configure.in: installing `./install-sh'<BR>configure.in: installing `./missing'<BR>Makefile.am: installing `./depcomp'<BR>[litao@vm0000131 hello]$ ll<BR>total 192<BR>-rw-rw-r-- 1 litao litao&nbsp; 31120 Aug 12 12:08 aclocal.m4<BR>drwxr-xr-x 2 litao litao&nbsp;&nbsp; 4096 Aug 12 12:14 autom4te.cache<BR>-rw-rw-r-- 1 litao litao&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 Aug 12 12:03 autoscan.log<BR>-rwxrwxr-x 1 litao litao 122297 Aug 12 12:11 configure<BR>-rw-rw-r-- 1 litao litao&nbsp;&nbsp;&nbsp; 496 Aug 12 12:08 configure.in<BR>lrwxrwxrwx 1 litao litao&nbsp;&nbsp;&nbsp;&nbsp; 31 Aug 12 12:16 depcomp -&gt; /usr/share/automake-1.9/depcomp<BR>-rw-rw-r-- 1 litao litao&nbsp;&nbsp;&nbsp;&nbsp; 68 Aug 12 12:02 hello.c<BR>lrwxrwxrwx 1 litao litao&nbsp;&nbsp;&nbsp;&nbsp; 34 Aug 12 12:16 install-sh -&gt; /usr/share/automake-1.9/install-sh<BR>-rw-rw-r-- 1 litao litao&nbsp;&nbsp;&nbsp;&nbsp; 69 Aug 12 12:15 Makefile.am<BR>-rw-rw-r-- 1 litao litao&nbsp; 16561 Aug 12 12:16 Makefile.in<BR>lrwxrwxrwx 1 litao litao&nbsp;&nbsp;&nbsp;&nbsp; 31 Aug 12 12:16 missing -&gt; /usr/share/automake-1.9/missing</P>
 <P>六、configure<BR>生成 Makefile， config.log， 和 config.status</P></DIV></TD></TR></TBODY></TABLE>
-
 
 
 
