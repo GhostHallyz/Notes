@@ -1,3 +1,14 @@
+
+
+```
+#3的意思是开启TFO客户端和服务器端
+#1表示开启客户端，2表示开启服务器端
+
+echo 3 > /proc/sys/net/ipv4/tcp_fastopen
+```
+
+
+
 client.c
 
 ```c
@@ -59,8 +70,9 @@ int main(){
 #endif
     serv_addr.sq_sin_family = SQ_AF_INET;
     serv_addr.sq_sin_port = htons(5060);
+    
     int len = sendto(sfd, data, data_len, MSG_FASTOPEN, (struct sockaddr *) &serv_addr, sizeof(serv_addr));
-    printf("error: %d-%s\\n", errno, strerror(errno));
+    printf("error: %d-%s\n", errno, strerror(errno));
     close(sfd);
 }
 

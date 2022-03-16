@@ -71,7 +71,7 @@ git push web
 
 ## 2.Git修改已经提交的用户名信息
 
-```
+```bash
 # 第一步，（n）代表提交次数
 git rebase -i HEAD~n
 # 第二步
@@ -86,7 +86,7 @@ git push --force
 
 ## 3.GIt合并多次提交
 
-```
+```bash
 # 第一步，（n）代表提交次数
 git rebase -i HEAD~n
 # 第二步
@@ -97,5 +97,52 @@ git rebase -i HEAD~n
 git rebase --continue
 # 第五步
 git push --force
+```
+
+## 4.回退代码到指定版本
+
+```bash
+# 查看所有的历史版本，获取你git的某个历史版本的id， 
+git log
+# 回退本地代码库：
+git reset --hard ID
+# 推送到远程服务器：
+git push -f -u origin master
+# 重新拉代码：
+git pull
+```
+
+## 5.Git拉取某个分支的某段提交
+
+```bash
+# 要将A分支的提交 commit_id,拉取到 B 分支（获取A分支对应提交的commit_id，切换到B分支）
+git cherry-pick <commit_id>
+```
+
+## 6.git远端覆盖本地仓库
+
+```bash
+git fetch --all
+git reset --hard <remote>/<branch_name>
+#示例：
+git fetch --all
+git reset --hard origin/master
+```
+
+## 7.git 设置提交邮箱和用户
+
+```bash
+#查看当前仓库本地设置
+git config --local --list
+#查看全局配置
+git config --global --list
+
+#设置当前仓库
+git config user.name 你的目标用户名；
+git config user.email 你的目标邮箱名;
+
+#设置全局
+git config  --global user.name 你的目标用户名；
+git config  --global user.email 你的目标邮箱名;
 ```
 

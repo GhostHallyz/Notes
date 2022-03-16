@@ -1,3 +1,13 @@
+
+
+```
+sudo tcpdump -i any host localhost and port 80 -v -c 1 -w /tmp/daemon.out
+```
+
+
+
+
+
 Usage: tcpdump [-aAbdDefhHIJKlLnNOpqStuUvxX#] [ -B size ] [ -c count ]
                 [ -C file_size ] [ -E algo:secret ] [ -F file ] [ -G seconds ]
                 [ -i interface ] [ -j tstamptype ] [ -M secret ] [ --number ]
