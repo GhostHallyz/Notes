@@ -116,4 +116,11 @@ openssl s_server -accept 443 -key /root/openssl/apps/server.pem -cert /root/open
 BIO_ADDRINFO_protocol(ai) == IPPROTO_TCP
 ```
 
+
+
+```
 ./config -d shared --prefix=/usr/local/ssl3 --openssldir=/usr/local/ssl3 enable-tfo enable-tls1_3 enable-ssl3 enable-ssl3-method
+
+./config -d --prefix=/usr/local/ssl3 --openssldir=/usr/local/ssl3 enable-tfo enable-tls1_3 enable-ssl3 enable-ssl3-method
+```
+

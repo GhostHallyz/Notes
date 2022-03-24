@@ -9,6 +9,13 @@ sudo ldconfig
 openssl s_server -accept 443 -key server.pem -cert server.pem -debug -msg
 
 openssl s_client -connect 127.0.0.1:443 -debug -msg
+
+
+ln -s /usr/local/ssl3/lib/libssl.so.3 /usr/lib64/libssl.so.3
+ln -s /usr/local/ssl3/lib/libcrypto.so.3 /usr/lib64/libcrypto.so.3
+
+sudo ln -s /usr/local/ssl3/lib64/libssl.so.1.1 /usr/local/lib64/libssl.so.1.1
+sudo ln -s /usr/local/ssl3/lib64/libcrypto.so.1.1 /usr/local/lib64/libcrypto.so.1.1
 ```
 
 

@@ -146,3 +146,14 @@ git config  --global user.name 你的目标用户名；
 git config  --global user.email 你的目标邮箱名;
 ```
 
+## 8.git将某个分支的代码完全覆盖另一个分支
+
+```
+# 将test分支上的代码完全覆盖dev分支，首先切换到dev分支
+git checkout dev
+# 然后直接设置代码给远程的test分支上的代码
+git reset --hard origin/test
+# 将本地分支强行推到远程分支。
+git push -f
+```
+
