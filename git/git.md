@@ -1,6 +1,6 @@
 git
 
-## 1.git 常用命令速查表
+## 1.Git 常用命令速查表
 
 ![Git-command](image\Git-command.png)
 
@@ -99,7 +99,7 @@ git rebase --continue
 git push --force
 ```
 
-## 4.回退代码到指定版本
+## 4.Git 回退代码到指定版本
 
 ```bash
 # 查看所有的历史版本，获取你git的某个历史版本的id， 
@@ -119,7 +119,7 @@ git pull
 git cherry-pick <commit_id>
 ```
 
-## 6.git远端覆盖本地仓库
+## 6.Git 远端覆盖本地仓库
 
 ```bash
 git fetch --all
@@ -129,7 +129,7 @@ git fetch --all
 git reset --hard origin/master
 ```
 
-## 7.git 设置提交邮箱和用户
+## 7.Git 设置提交邮箱和用户
 
 ```bash
 #查看当前仓库本地设置
@@ -146,7 +146,7 @@ git config  --global user.name 你的目标用户名；
 git config  --global user.email 你的目标邮箱名;
 ```
 
-## 8.git将某个分支的代码完全覆盖另一个分支
+## 8.Git 将某个分支的代码完全覆盖另一个分支
 
 ```
 # 将test分支上的代码完全覆盖dev分支，首先切换到dev分支
